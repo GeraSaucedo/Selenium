@@ -1,5 +1,4 @@
 package ClaseUno;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +23,8 @@ public class Trivago {
 			e.printStackTrace();
 		}
 		
+		driver.manage().window().maximize();
+		
 		//XPATH 	//*[@type="search"]		"Vancouver"
 		element = driver.findElement(By.xpath("//*[@type=\"search\"]"));
 		element.sendKeys("Vancouver");
@@ -35,8 +36,8 @@ public class Trivago {
 		
 		//xpath 	//span[contains(text(),"Llegada")]		click		[Boton llegada]
 		element = driver.findElement(By.xpath("//span[text()=\"Llegada\"]"));
-		element.click();
-		element.click();
+		//element.click();
+		//element.click();
 		Thread.sleep(3000);
 		
 		//cssselect 	tr:nth-child(4) .cal-day-wrap:nth-child(1)		CLICK [dia en el calendaio]
@@ -117,9 +118,9 @@ public class Trivago {
 		//xpath 	//*[text()="Confirmar"]			click  [Boton confirmar habitaciones]
 		element = driver.findElement(By.xpath("//*[text()=\"Confirmar\"]"));
 		element.click();
+		Thread.sleep(1000);
 		
-		/*
-		//FILTROS 	
+		//filtros	
 		//estrellas
 		element = driver.findElement(By.cssSelector(".toolbar-list__item:nth-child(2)"));
 		action = new Actions(driver);
@@ -149,12 +150,12 @@ public class Trivago {
 		element = driver.findElement(By.id("attractions"));
 		select = new Select(element);
 		select.selectByVisibleText("Canada Place");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		
 		element = driver.findElement(By.xpath("(//*[@role=\"slider\"])[2]"));
 		action.dragAndDropBy(element, -150, 0);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		
 		//mas filtros el ultimo
@@ -174,12 +175,11 @@ public class Trivago {
 		action.dragAndDropBy(element, -200, 0).build().perform();
 		Thread.sleep(1000);
 		
-		*/
-		
 		//id mf-select-sortby dropdown visible=Precio y recomendados
 		element = driver.findElement(By.id("mf-select-sortby"));
 		select = new Select(element);
 		select.selectByVisibleText("Precio y recomendados");
+		Thread.sleep(2000);
 		
 		//Seleccionaroferta			xpath 		(//*[@itemprop="makesOffer"])[1]	click
 		element = driver.findElement(By.xpath("(//*[@itemprop=\"makesOffer\"])[1]"));
