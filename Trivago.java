@@ -123,7 +123,7 @@ public class Trivago {
 		//css .toolbar-list li:nth-child(2,3,4,5) mouseover
 		element = driver.findElement(By.xpath("//*[@role=\"slider\"]"));
 		Actions action = new Actions(driver);
-		action.dragAndDropBy(element, -40, 0);
+		action.dragAndDropBy(element, -400, 0);
 		Thread.sleep(1000);
 		
 		
