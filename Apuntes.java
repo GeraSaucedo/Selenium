@@ -1,3 +1,4 @@
+
 public class Apuntes {
 	
 	public static void main(String [] args) {
@@ -98,13 +99,23 @@ public class Apuntes {
 	 * 	DEMOQA.COM
 	 *  DRAGGABLE					//a[@title="Draggable"]
 	 *  HOME BUTTON					//a[@title="Home"]
+	 *  IMG							(//img[@alt="pattern-14"])[2]
+	 *  Registro:					//a[text()="Registration"]
+	 *  Slectable: 					//a[text()="Selectable"]
+	 *  
+	 *  UDEMY;;;
+	 *  LOGO 						(//img[@alt="Udemy"])[1]
+	 *  Search 						//input[@data-purpose="search-input"]
+	 *  carro						//span[contains(@class,"cart")]
+	 *  Log in						//button[@data-purpose="header-login"]   |		
+	 *  search box 2 				//input[@data-purpose="home-quick-search-box"]
 	 *  
 	 *  SDETS / DEVOPS
 	 * 
 	 * 
 	 * Explorar la aplicacion
 	 * revisar requerimientos
-	 * seleccionar heramienta automatizacion
+	 * seleccionar heramienta automatizacion (segun el tipo de aplicacion si es web browser, mobile, etc)
 	 * hacer los test cases
 	 * suit de pruebas
 	 * generar reportes
@@ -153,6 +164,48 @@ public class Apuntes {
 	 *  .col-md-4:nth-child(3) img
 	 * 	
 	 * 
+	 * 
+	 * WAITS---------------------------------
+	 * 1. EXPLICIT 			-> MAS USADO
+	 * 2. IMPLICIT
+	 * 3. FLUENT			-> MENOS USADO / MAS AVANZADO
+	 * 
+	 * Explicit: Nos da tiempo de espera si cumple condiciones indicadas 
+	 * Implicito: mala practica ya que el implicito le da el mismo tiempo indicado a todos los elementos
+	 * Fluent: hibrido entre empliit e implicit 
+	 * 
+	 * 
+	 * PREGUNTAS que hay que saber:
+	 * What is selenium?
+	 * diferencia entre xpath relativo y abosluto
+	 * formato del xpathy css selector
+	 * fundador selenium
+	 * fundador webdriver
+	 * tipos de localizadores
+	 * PROCESO DE AUTOMATIZACION
+	 * que es automation
+	 * cuando hacer automation: ambiente estable
+	 * Selenium version mas recientes
+	 * lenguajes de programacion
+	 * 
+	 * 
+	 * BUENAS PRACTICAS:
+	 * - try catch a ver si cargo la pagina
+	 * - usar xpath relativos
+	 * - no usar datos reales en los test
+	 * 
+	 * COMPONENTES DEL CORE DE SLELENIUM
+	 * - IDE 
+	 * - remote control
+	 * - grid  -  mandar ejecuciones paralelas a diferentes maquinas o browers
+	 * 
+	 * WebDriverWait varWait = new WebDriverWait(driver,10);
+	 * WebElement element = driver.findElement(By.name("q"))
+	 * varWait.until(ExpectedConditions.visibulityOf(element)).sendKeys("Hola!");
+	 * 
+	 * 
+	 * >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PAGE OBJECT MODEL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	 * POM: es un patron de disenio de objetos donde las paginas estan representadas como objetos y las clases como variables
 	 * 
 	 * 
 	 * 
